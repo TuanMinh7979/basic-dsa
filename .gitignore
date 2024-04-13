@@ -1,0 +1,186 @@
+# Ignore build artifacts and executables
+/build/
+/bin/
+/*.exe
+/*.out
+**/output/
+
+test.cpp
+test1.cpp
+
+.vs*/
+
+
+# Ignore generated files
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+
+# Ignore IDE and editor specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.sln.docstates
+*.suo
+*.user
+*.ldb
+*.pdb
+
+# Ignore cmake build directory
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CMakeSettings.json
+CMakeScripts/
+CMakeScriptsTests/
+
+# Ignore generated Makefile
+Makefile
+
+# Ignore dependencies
+dependencies/
+
+
+
+
+
+
+# for C# project 
+# Visual Studio / Rider / ReSharper files
+.vs/
+.vscode/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]est[Rr]esult*/
+[Tt]est[Rr]eport/
+build/
+bld/
+_UpgradeReport_Files/
+_UpgradeReport_Files/
+
+# Rider generated .idea folder
+.idea/
+
+# Visual Studio Code generated .vscode folder
+.vscode/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Xamarin-specific
+*.android.csproj
+*.androidx.csproj
+*.appletv.csproj
+*.appletvos.csproj
+*.appletvsimulator.csproj
+*.ios.csproj
+*.mac.csproj
+*.macos.csproj
+*.watchos.csproj
+*.wear.csproj
+
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[^\s\S]*.x86_64/
+[^\s\S]*.x86/
+[^\s\S]*.apk
+[^\s\S]*.aab
+[^\s\S]*.unitypackage
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono-specific
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Visual Studio Code folders
+.vscode/
+
+# Jetbrains Rider
+.idea/
+
+# Roslyn cache directories
+*.ide/
+
+# Unity3D generated meta files
+*.pidb.meta
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
+
+# Mac files
+.DS_Store
+
+# C# Windows, Linux and macOS build results
+/[Bb]in/
+/[Oo]bj/
+
+# Ignore all obj directories
+**/obj/
+
+
+# Ignore .csproj files
+*.csproj
+*.sln
