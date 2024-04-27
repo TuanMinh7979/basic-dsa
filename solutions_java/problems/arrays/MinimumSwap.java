@@ -1,0 +1,77 @@
+package solutions_java.problems.arrays;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+class Pair {
+    private int first;
+    private int second;
+
+    public Pair(int first, int second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    public int getFirst() {
+        return first;
+    }
+
+    public int getSecond() {
+        return second;
+    }
+
+}
+
+public class MinimumSwap {
+
+    private int countMinSwaps(List<Integer> arr) {
+        int n = arr.size();
+        List<Pair> pairs = new ArrayList<Pair>();
+
+        for (int i = 0; i < arr.size(); i++) {
+            pairs.add(new Pair(arr.get(i), i));
+
+        }
+
+        
+        Collections.sort(pairs, 
+        (o1, o2) -> Integer.valueOf(o1.getFirst()).compareTo(Integer.valueOf(o2.getFirst())));
+        boolean[] visited = new boolean[n];
+        int ans = 0;
+
+        for (int i = 0; i < pairs.size(); i++) {
+            int oldPosition = pairs.get(i).getSecond();
+// compare index before sort(oldPosition) and new index (i)
+            if (visited[i] == true || oldPosition == i) {
+                continue;
+            }
+
+            int curPos = i;
+            int cycle = 0;
+            while (!visited[curPos]) {
+                visited[curPos] = true;
+                int nextPos = pairs.get(curPos).getSecond();
+                curPos = nextPos;
+                cycle += 1;
+            }
+
+            ans += (cycle - 1);
+
+        }
+
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> arr = Arrays.asList(3, 1, 2);
+        MinimumSwap minimunSwap = new MinimumSwap();
+        System.out.println(minimunSwap.countMinSwaps(arr));
+
+    }
+
+}
