@@ -11,32 +11,32 @@ public class ReplaceString {
 
         int newAdditionalSpace = 0;
         for (int i = 0; i < input.length; i++) {
-            if (input[i]==' ') {
+            if (input[i] == ' ') {
                 newAdditionalSpace += 2;
             }
         }
         // create new arr with new len
-        int newLen = input.length + newAdditionalSpace ;
+        int newLen = input.length + newAdditionalSpace;
         Character[] rs = new Character[newLen];
         // start from right to left
-           for (int i = input.length - 1; i >= 0; i--) {
+        for (int i = input.length - 1; i >= 0; i--) {
             if (input[i].equals(' ')) {
-                rs[newLen -  1] = '0';
-                rs[newLen  - 2] = '2';
-                rs[newLen  - 3] = '%';
-                newLen-=3;
+                rs[newLen -= 1] = '0';
+                rs[newLen -= 1] = '2';
+                rs[newLen -= 1] = '%';
+
             } else {
-                rs[newLen - 1] = input[i];
-                newLen--;
+                rs[newLen -= 1] = input[i];
+
             }
 
         }
         // count num of
-        StringBuilder rsstr= new StringBuilder();
+        StringBuilder rsstr = new StringBuilder();
         for (int i = 0; i < rs.length; i++) {
             rsstr.append(rs[i]);
         }
-        return rsstr.toString() ;
+        return rsstr.toString();
     }
 
     public static void main(String[] args) {
