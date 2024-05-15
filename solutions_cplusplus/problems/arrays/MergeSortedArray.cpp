@@ -45,7 +45,7 @@ vector<int> mergeSortedArrays(const vector<int> &arr1, const vector<int> &arr2)
 
 int main()
 {
-    vector<int> arr1 = {1, 3, 5, 7};
+    vector<int> arr1 = {1, 3, 5, 7, 10};
     vector<int> arr2 = {2, 4, 6, 8};
 
     vector<int> rs = mergeSortedArrays(arr1, arr2);
