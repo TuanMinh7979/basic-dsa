@@ -4,23 +4,24 @@ function heighestMountain(arr) {
     let maxMtLen = 0;
     // [5, 1, 2, 3,4, 3, 2, 5] max len is 6 
     for (let i = 1; i < arr.length; i++) {
+
         let cnt = 1;
-      
-        
+
         if (arr[i - 1] < arr[i] && arr[i] > arr[i + 1]) {
+            cnt = 1;
             let temp = i;
-            while (arr[temp - 1] < arr[temp] && temp>=0) {
+            while (arr[temp - 1] < arr[temp] && temp >= 0) {
                 cnt++;
                 temp--;
             }
             temp = i;
-            while (arr[temp] > arr[temp + 1] && temp<arr.length) {
+            while (arr[temp] > arr[temp + 1] && temp < arr.length) {
                 cnt++;
                 temp++;
 
             }
         }
-        maxMtLen= Math.max(cnt, maxMtLen)
+        maxMtLen = Math.max(cnt, maxMtLen)
 
     }
 
